@@ -1,0 +1,247 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.white-font * {
+  color: #fff; }
+
+.light {
+  background: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: none;
+  border: none;
+  border-radius: 0px; }
+
+/**
+ *
+  Example
+<div class="center-box">
+<div class="box yellow white-font">      
+  	<a data-url="event/" class="body-box url_data">
+
+  		[ 
+  		<div class="btn-group control-div">
+        <a class=" reset-style light btn dropdown-toggle" data-toggle="dropdown">
+        	Action
+        	<span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu reset-style">
+          	<li class="func-delete-post">
+            <a href="#deleteEventModal" role="button" data-toggle="modal">
+            	<img class="icon-close icon-remove-sign"/> Remove
+            </a>
+          	</li>
+          	<li class="func-edit-event">
+            <a href="#edit_event" data-toggle="tab">
+              <img class=" icon-pencil"/> Edit
+            </a>
+          	</li>
+        </ul>
+      	</div>
+      	]
+
+      	<div class="nav-title">06/02/2013</div>
+      	<h2 class="title light"> meet john </h2>
+      	<div class="speakers">      
+        
+          <img src="https://si0.twimg.com/profile_images/1229650863/twitter-profile_normal.jpg" class="speaker" title="littlecalculist">
+        
+          <img src="https://si0.twimg.com/profile_images/2203604699/profile2_bigger.png" class="speaker" title="jlongster">
+        
+          <img src="https://si0.twimg.com/profile_images/59079748/2262419520_e5832a812d_bigger.jpg" class="speaker" title="igrigorik">
+        
+      </div>
+      <div class="right-text">/littlecalculist /jlongster /igrigorik /</div>
+
+  	</a>
+</div>
+</div>
+ */
+.center-box {
+  margin-top: 96px; }
+  .center-box .blue {
+    background-color: #1F719E; }
+  .center-box .green {
+    background-color: #007F1F; }
+  .center-box .orange {
+    background-color: #B24423; }
+  .center-box .yellow {
+    background-color: #A57611; }
+  .center-box .gray {
+    background-color: rgba(0, 0, 0, 0.1); }
+  .center-box .box {
+    position: relative;
+    padding: 5px;
+    overflow: auto;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    /**
+    margin-bottom: 10px;
+    */ }
+    .center-box .box div.body-box {
+      width: 100%;
+      height: 100%;
+      display: block; }
+    .center-box .box .wrap-div {
+      margin-top: 5px;
+      overflow: auto; }
+    .center-box .box .nav-title {
+      padding: 3px; }
+    .center-box .box h2.title {
+      font-family: 'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+      font-weight: 200;
+      font-size: 13pt;
+      letter-spacing: 0.01em;
+      line-height: normal;
+      font-smooth: always;
+      width: auto;
+      padding: 6px 5px;
+      margin-top: 01px; }
+    .center-box .box .right-text {
+      clear: both;
+      text-align: right; }
+    .center-box .box img.speaker {
+      width: 40px;
+      height: 40px;
+      margin-right: 3px;
+      float: right; }
+    .center-box .box .control-div {
+      position: absolute;
+      right: 5px; }
+      .center-box .box .control-div .dropdown-toggle {
+        padding: 3px; }
+      .center-box .box .control-div .dropdown-menu {
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.7); }
+  .center-box .colors-list {
+    display: block;
+    overflow: auto;
+    clear: both; }
+    .center-box .colors-list .color {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      float: right; }
+  .center-box .speakers-list {
+    display: block;
+    overflow: auto;
+    clear: both; }
+    .center-box .speakers-list .speaker {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      float: right; }
+      .center-box .speakers-list .speaker img.active {
+        border: 4px solid #e5eaf0; }
+      .center-box .speakers-list .speaker .right-top-img {
+        position: absolute;
+        right: 0px;
+        width: 14px;
+        height: 14px; }
+        .center-box .speakers-list .speaker .right-top-img img {
+          width: 100%;
+          height: 100%; }
+
+/**
+ * ---------------end center-box---------------- */
+/**
+* pager
+Example
+<!--
+ <ul class="line-pager clearfix" style="">
+   <li class="pager-current first" style="">
+     <a title="current page" href="#">1</a>
+   </li>
+   <li class="pager-item">
+     <a title="Go to page 2" href="#">2</a>
+   </li>
+   <li class="pager-next">
+     <a title="Go to next page" href="#">next ›</a>
+   </li>
+   <li class="pager-last last">
+     <a title="Go to last page" href="#">last »</a>
+   </li>
+ </ul>
+ -->
+*/
+.line-pager {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  text-align: left;
+  clear: both;
+  margin-bottom: 20px !important;
+  background: #ebebeb;
+  color: #000;
+  height: 23px; }
+
+.line-pager li.pager-current, .line-pager li.active {
+  background: #0088cc;
+  outline: 0;
+  font-weight: bold;
+  text-decoration: none; }
+
+.line-pager li {
+  background: #CCC;
+  margin: 0;
+  padding: 4px 8px;
+  float: left;
+  width: 23px;
+  height: 23px;
+  display: inline;
+  list-style-type: none;
+  border-radius: 0px;
+  text-indent: 0px; }
+
+.line-pager li a:hover {
+  background-image: #000;
+  color: #fff; }
+
+.line-pager li.pager-next, .line-pager li.pager-prev {
+  position: absolute;
+  top: 0;
+  right: 70px; }
+
+.line-pager li.pager-last, .line-pager li.pager-next.last {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-right: 0; }
+
+.line-pager li a {
+  display: block;
+  cursor: pointer;
+  line-height: 14px;
+  font: 12px Arial;
+  color: #000; }
+
+.line-pager li.pager-prev a, .line-pager li.pager-next a, .line-pager li.pager-last a {
+  width: 70px;
+  text-align: center; }
+
+[class*="pager-"] {
+  width: auto !important;
+  padding: 0px !important; }
+
+[class*="pager-"] a {
+  position: static;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  width: auto;
+  height: auto;
+  margin: 0px;
+  border: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  padding: 4px 8px; }
+
+/**
+* ---------------end paper---------------- */
