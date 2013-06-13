@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="stylesheets/jtweet.css"/>   
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,6 +29,8 @@
         </ul>
       </header>
       <section>
+        <h3>Demo.</h3>
+        <ul class="tweetsList_meth" style="padding: 0;"></ul>
         <h3>
 <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
@@ -66,6 +69,31 @@ $ git checkout gh-pages
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="javascripts/jtweet.js"></script>
+    <script type="text/javascript">
+    $.fn.jTweet({
+        template: '<li class="box <%= color %> white-font">'+
+          '<div class="body-box">'+
+            '<h2 class="title light">'+
+              '<%= created_at %>'+
+              '<img src="<%= profile_image %>" class="" title="<%= user_name %>" style="height:24px; width: 24px; float: right;">'+
+            '</h2>'+
+            '<div><%= text %></div>'+
+            '<div class="wrap-div"><%= user_mentions_html %></div>'+
+          '</div>'+
+        '</li>',
+        callback: function(){
+          $(function () {
+            //$('.antiscroll-inner').height($(window).height()-96-45);
+            //$('.antiscroll-wrap').antiscroll();
+          });
+        }
+      })
+      $('.tweetsList_meth').jTweet('loadInit');
+      $('.loadMoreTweet_meth').click(function(){
+        $('.tweetsList_meth').jTweet('loadMore', $.fn.jTweet.idTweet);
+      });
+      </script>
   </body>
 </html>
