@@ -12,7 +12,7 @@
 
 (function( $ ) {
 	// Declare variables to hold twitter API url and user name
-	var twitter_api_url = 'http://api.twitter.com/1.1/statuses/user_timeline.json';
+	var twitter_api_url = 'http://api.twitter.com/1/statuses/user_timeline.json';
 	//var twitter_api_url = 'http://search.twitter.com/search.json';
 	var twitter_user		= 'meteorjs';
 	var count				= 20;
